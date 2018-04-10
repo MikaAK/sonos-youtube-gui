@@ -1,0 +1,46 @@
+{
+  "version": "1.0.0",
+  "name": "sonos-youtube-gui",
+  "author": "MikaAK <mika@kalathil.me>",
+  "license": "SEE LICENSE IN LICENSE",
+  "description": "Gui for sonos-youtube",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "electron-webpack dev",
+    "compile": "electron-webpack",
+    "dist": "yarn compile && electron-builder",
+    "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null"
+  },
+  "dependencies": {
+    "dotenv": "^5.0.1",
+    "prop-types": "^15.6.1",
+    "ramda": "^0.25.0",
+    "react": "^16.3.1",
+    "react-autosuggest": "^9.3.4",
+    "react-dom": "^16.3.1",
+    "react-form": "^3.5.1",
+    "react-select": "^1.2.1",
+    "recompose": "^0.26.0",
+    "sonos-youtube": "mikaak/sonos-youtube#43ec923d3bbe3643029c12551afbc983357b24b1",
+    "source-map-support": "^0.5.4"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-strict-mode": "^7.0.0-beta.44",
+    "@babel/preset-react": "^7.0.0-beta.44",
+    "@babel/preset-stage-2": "^7.0.0-beta.44",
+    "babel-eslint": "^8.2.2",
+    "electron": "1.8.4",
+    "electron-builder": "^20.8.1",
+    "electron-webpack": "^2.0.1",
+    "electron-webpack-eslint": "^2.1.0",
+    "eslint-plugin-babel": "^5.0.0",
+    "eslint-plugin-mocha": "^5.0.0",
+    "eslint-plugin-react": "^7.7.0",
+    "node-sass": "^4.8.3",
+    "sass-loader": "^6.0.7",
+    "webpack": "^4.4.1"
+  },
+  "resolutions": {
+    "webpack-sources": "1.0.1"
+  }
+}

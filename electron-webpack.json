@@ -1,0 +1,6 @@
+{
+  "title": "Sonos Youtube",
+  "renderer": {
+    "dll": ["react", "react-dom"]
+  }
+}
