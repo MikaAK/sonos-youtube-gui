@@ -1,4 +1,4 @@
-import {isDate} from '../../helpers/util'
+import {isDate} from 'common/helpers/util'
 
 const dateOpts = {
   weekday: 'long',

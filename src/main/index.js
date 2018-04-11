@@ -3,6 +3,7 @@ import * as path from 'path'
 import {format as formatUrl} from 'url'
 
 import {main} from './main'
+import {setup} from './setup'
 
 const isDevelopment = process.env.NODE_ENV !== 'production'
 
@@ -13,6 +14,7 @@ const createMainWindow = () => {
   const window = new BrowserWindow({
   })
 
+  setup(window)
   main(window)
 
   if (isDevelopment) {

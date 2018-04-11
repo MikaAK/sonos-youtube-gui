@@ -1,5 +1,4 @@
 import './styles/global.scss'
-import 'react-autosuggest/dist/theme'
 
 import React, {Fragment} from 'react'
 import {render} from 'react-dom'

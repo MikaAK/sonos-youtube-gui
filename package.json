@@ -21,8 +21,9 @@
     "react-form": "^3.5.1",
     "react-select": "^1.2.1",
     "recompose": "^0.26.0",
-    "sonos-youtube": "mikaak/sonos-youtube#43ec923d3bbe3643029c12551afbc983357b24b1",
-    "source-map-support": "^0.5.4"
+    "sonos-youtube": "github:mikaak/sonos-youtube#38a1e73",
+    "source-map-support": "^0.5.4",
+    "youtube-node": "^1.3.2"
   },
   "devDependencies": {
     "@babel/plugin-transform-strict-mode": "^7.0.0-beta.44",

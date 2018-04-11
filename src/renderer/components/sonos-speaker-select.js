@@ -1,10 +1,10 @@
 import React from 'react'
 import Select from 'react-select'
-import {pure, setPropTypes} from 'recompose'
+import {pure, setPropTypes, setDisplayName} from 'recompose'
 import PropTypes from 'prop-types'
 import {head, map, applySpec, prop, identity, compose} from 'ramda'
 
-import {whenNotNil} from '../../helpers/fp'
+import {whenNotNil} from 'common/helpers/fp'
 
 export const SpeakerProp = PropTypes.shape({
   name: PropTypes.string
@@ -12,6 +12,7 @@ export const SpeakerProp = PropTypes.shape({
 
 const enhance = compose(
   pure,
+  setDisplayName('SonosSpeakerSelect'),
   setPropTypes({
     name: PropTypes.string,
     value: SpeakerProp,
@@ -26,17 +27,18 @@ export const createSelectOption = applySpec({
 })
 
 const createOptions = map(createSelectOption)
-const createFirstOption = compose(whenNotNil(createSelectOption), head)
+export const createFirstOption = compose(whenNotNil(createSelectOption), head)
 
 export const SonosSpeakerSelect = enhance(({
   name = 'sonos-speaker-select',
   sonosSpeakers = [],
-  value = createFirstOption(sonosSpeakers),
+  value,
   onChange
 }) => (
-  <Select name={name}
-          value={value}
-          onChange={onChange}
-          options={createOptions(sonosSpeakers)}
+  <Select
+    name={name}
+    value={value}
+    onChange={onChange}
+    options={createOptions(sonosSpeakers)}
   />
 ))

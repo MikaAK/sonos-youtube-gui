@@ -1,4 +1,4 @@
-import {createIpcArgOn} from '../../helpers/ipc'
+import {createIpcArgOn} from 'common/helpers/ipc'
 
 import {ipcOn$} from './ipc-on'
 
